@@ -12,8 +12,8 @@ def compute_height(n, parents, shit, rout, smth):
     else:
         smth[n]=1
         if(parents == -1):
-        max_height = 1
-        rout=1
+            max_height = 1
+            rout=1
         else:
             parent2 = shit[parents]
             max_height = 1 + compute_height(parents, parent2, shit)
