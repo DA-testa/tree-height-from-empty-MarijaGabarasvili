@@ -45,12 +45,13 @@ def main():
                 for line in file:
                     shit=[int(j) for j in line.split()]
     if littleshit:
+        min=0
         for j in range(0, number, 1):
             washere.append(0)
             size.append(0)
-        min=0
+        
         for j in range(0, number, 1):
-          max = compute_height(1, shit[j], shit)
+          max = compute_height(j, shit[j], shit)
           if(min<max):
             min=max
 
