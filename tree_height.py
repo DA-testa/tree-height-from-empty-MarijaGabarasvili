@@ -20,7 +20,6 @@ def compute_height(n, parents, shit):
 
 def main():
     # implement input form keyboard and from files
-    shit = []
     wait = input()
     littleshit = False
     if("I" in wait) :
@@ -29,13 +28,13 @@ def main():
         littleshit = True
 
     if("F" in wait):
-        name = "test/" + input() + ".txt"
+        name = "test/" + input()
         if not("a" in name):
             littleshit = True
             with open(name) as file:
                 number = int(next(file))
                 for line in file:
-                        shit=[int(j) for j in next(file).split()]
+                    shit=[int(j) for j in line.split()]
     if littleshit:
         for j in range(0, number, 1):
             max = compute_height(1, shit[j], shit)
