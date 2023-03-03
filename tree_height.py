@@ -26,34 +26,41 @@ def compute_height(n, parents, shit, rout, smth):
 
 
 def main():
-    # implement input form keyboard and from files
-    wait = input()
-    littleshit = False
-    if("I" in wait) :
-        number = int(input())
-        shit = [int(j) for j in input.split()]
-        littleshit = True
-
-    if("F" in wait):
-        name = "test/" + input()
-        if not("a" in name):
+    try:
+        wait = input()
+        littleshit = False
+        if("I" in wait) :
+            number = int(input())
+            shit = [int(j) for j in input.split()]
             littleshit = True
-            with open(name) as file:
-                number = int(next(file))
-                for line in file:
-                    shit=[int(j) for j in line.split()]
-    if littleshit:
-        for i in range(0, number, 1):
-            smth=[]
-            smth.append(0)
-            rout=[]
-            rout.append(0)
-        for j in range(0, number, 1):
-            max = compute_height(1, shit[j], shit,rout,smth)
-            min=0
-            if(min<max):
-                min = max
-        print(min)
+
+        if("F" in wait):
+            name = "test/" + input()
+            if not("a" in name):
+                littleshit = True
+                with open(name) as file:
+                    number = int(next(file))
+                    for line in file:
+                        shit=[int(j) for j in line.split()]
+        if littleshit:
+            for i in range(0, number, 1):
+                smth=[]
+                smth.append(0)
+                rout=[]
+                rout.append(0)
+            for j in range(0, number, 1):
+                max = compute_height(1, shit[j], shit,rout,smth)
+                min=0
+                if(min<max):
+                    min = max
+            print(min)
+        except Exception as typo:
+            print(typr(typo))
+            print(typo.args)
+            print(typo)
+
+    # implement input form keyboard and from files
+    
             
 
     # let user input file name to use, don't allow file names with letter a
