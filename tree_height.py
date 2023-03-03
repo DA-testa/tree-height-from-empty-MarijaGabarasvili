@@ -14,7 +14,29 @@ def compute_height(n, parents):
 
 def main():
     # implement input form keyboard and from files
+    lshit = []
+    wait = input()
+    littleshit = False
+    if("I" in wait) :
+        number = input()
+        shit = [int(j) for j in input.split()]
+        littleshit = True
+
+    if("F" in wait):
+        name = "test/" + input() + ".txt"
+        if not("a" in name):
+            littleshit = True
+            number = input()
+            len = [int(j) for j in input.split()]
+            with open(name) as file:
+                number = int(next(file))
+                for line in file:
+                    shit=[int(j) for j in next(file).split()]
     
+    if littleshit:
+        return
+            
+
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     
