@@ -54,7 +54,7 @@ def main():
           if(min<max):
             min=max
 
-    print(max)
+    print(min)
 
     # implement input form keyboard and from files
     
