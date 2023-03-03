@@ -33,7 +33,7 @@ def main():
     littleshit = False
     if("I" in wait) :
         number = int(input())
-        shit = [int(j) for j in input.split()]
+        shit = [int(j) for j in input().split()]
         littleshit = True
 
     if("F" in wait):
