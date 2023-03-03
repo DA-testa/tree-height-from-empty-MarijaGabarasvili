@@ -31,7 +31,7 @@ def main():
         littleshit = False
         if("I" in wait) :
             number = int(input())
-            shit = np.array([int(j) for j in input.split()])
+            shit = numpy.array([int(j) for j in input.split()])
             littleshit = True
 
         if("F" in wait):
@@ -41,7 +41,7 @@ def main():
                 with open(name) as file:
                     number = int(next(file))
                     for line in file:
-                        shit=np.array([int(j) for j in line.split()])
+                        shit=numpy.array([int(j) for j in line.split()])
         if littleshit:
             for i in range(0, number, 1):
                 smth=[]
