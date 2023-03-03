@@ -56,7 +56,7 @@ def main():
             print(min)
 
     except Exception as typo:
-        print(typr(typo))
+        print(type(typo))
         print(typo.args)
         print(typo)
 
