@@ -5,14 +5,21 @@ import threading
 import numpy
 
 
-def compute_height(n, parents, shit):
+def compute_height(n, parents, shit, rout, smth):
     max_height = 0
-    if(parents == -1):
-        max_height = 1
+    if(smth[n] == 1 ):
+        return rout[n]
     else:
-        parent2 = shit[parents]
-        max_height = 1 + compute_height(parents, parent2, shit)
+        smth[n]=1
+        if(parents == -1):
+        max_height = 1
+        rout=1
+        else:
+            parent2 = shit[parents]
+            max_height = 1 + compute_height(parents, parent2, shit)
+            rout[n]=max_height
     return max_height
+    
     # Write this function
     # Your code here
     
@@ -36,8 +43,13 @@ def main():
                 for line in file:
                     shit=[int(j) for j in line.split()]
     if littleshit:
+        for i in range(0, number, 1):
+            smth=[]
+            smth.append(0)
+            rout=[]
+            rout.append(0)
         for j in range(0, number, 1):
-            max = compute_height(1, shit[j], shit)
+            max = compute_height(1, shit[j], shit,rout,smth)
             min=0
             if(min<max):
                 min = max
