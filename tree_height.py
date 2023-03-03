@@ -8,17 +8,17 @@ washere = []
 size = []
 
 def compute_height(n, parents, shit):
-  if(washere[n]!=1):
-    washere[n]=1
-    if(parents==-1):
-      max_height = 1
-      size[n] = 1
-    else:
-      max_height = 1+compute_height(parents, shit[parents],shit)
-      size[n] = max_height
-    return max_height
-  else:
+  if(washere[n]==1):
     return size[n]
+  else:
+    washere[n]=1
+    if(parents!=-1):
+        max_height = 1+compute_height(parents, shit[parents],shit)
+        size[n] = max_height  
+    else:
+        max_height = 1
+        size[n] = 1
+    return max_height
     
 
           
