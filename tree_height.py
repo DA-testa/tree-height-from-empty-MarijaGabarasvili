@@ -6,7 +6,6 @@ import numpy
 
 
 def compute_height(n, parents, shit, rout, smth):
-    max_height = 0
     if(smth[n] == 1 ):
         return rout[n]
     else:
@@ -41,7 +40,7 @@ def main():
                 with open(name) as file:
                     number = int(next(file))
                     for line in file:
-                        shit=numpy.array([int(j) for j in line.split()])
+                        shit=numpy.array(([int(j) for j in line.split()]))
         if littleshit:
             for i in range(0, number, 1):
                 smth=[]
