@@ -32,13 +32,10 @@ def main():
         name = "test/" + input() + ".txt"
         if not("a" in name):
             littleshit = True
-            number = int(next(file))
-            len = [int(j) for j in input.split()]
             with open(name) as file:
                 number = int(next(file))
                 for line in file:
-                    shit=[int(j) for j in next(file).split()]
-    
+                        shit=[int(j) for j in next(file).split()]
     if littleshit:
         for j in range(0, number, 1):
             max = compute_height(1, shit[j], shit)
