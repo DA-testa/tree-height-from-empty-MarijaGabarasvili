@@ -15,6 +15,7 @@ def compute_height(n, parents, shit):
     if(parents!=-1):
       max_height = 1+compute_height(parents, shit[parents],shit)
       size[n] = max_height
+    return max_height
     else:
       max_height = 1
       size[n] = 1
