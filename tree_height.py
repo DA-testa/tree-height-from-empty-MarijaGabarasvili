@@ -54,10 +54,11 @@ def main():
                 if(min<max):
                     min = max
             print(min)
-        except Exception as typo:
-            print(typr(typo))
-            print(typo.args)
-            print(typo)
+
+    except Exception as typo:
+        print(typr(typo))
+        print(typo.args)
+        print(typo)
 
     # implement input form keyboard and from files
     
