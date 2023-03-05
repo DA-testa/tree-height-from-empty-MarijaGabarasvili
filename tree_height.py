@@ -29,6 +29,7 @@ def compute_height(n, parents, shit):
 
 
 def main():
+
     wait = input()
     littleshit = False
     if("I" in wait) :
